@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #121826;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+#drum-machine {
+    width: 90%;
+    max-width: 500px;
+    padding: 30px;
+    background: #202b3c;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 25px;
+    color: #38bdf8;
+}
+
+#pad-bank {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.drum-pad {
+    min-height: 100px;
+    border: none;
+    border-radius: 10px;
+    background: #334155;
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.15s, transform 0.15s;
+    box-shadow: 0 4px 0 #0f172a;
+}
+
+.drum-pad:hover {
+    background: #0ea5e9;
+}
+
+.drum-pad:active,
+.drum-pad.active {
+    background: #f59e0b;
+    color: #121826;
+    transform: scale(0.95);
+    box-shadow: none;
+}
+
+#display {
+    margin-top: 25px;
+    padding: 15px;
+    min-height: 50px;
+    border-radius: 8px;
+    background: #0f172a;
+    color: #38bdf8;
+    font-size: 16px;
+}
+
+@media (max-width: 400px) {
+    #drum-machine {
+        padding: 18px;
+    }
+
+    .drum-pad {
+        min-height: 80px;
+    }
+}
