@@ -1,8 +1,3 @@
-function outer(x) {
-    return function(y) {
-        return x + y;
-    };
-}
-
-let add5 = outer(5);
-console.log(add5(3));
+const map = new Map([["a", 1], ["b", 2]]);
+map.clear();
+console.log(map.size);
